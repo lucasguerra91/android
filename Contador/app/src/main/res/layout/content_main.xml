@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/alert_dark_frame"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.lguerra.contador.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tituloTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="@string/contador"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/showCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/incrementa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="incrementa"
+            android:text="@string/incrementa" />
+
+        <Button
+            android:id="@+id/decrementa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/incrementa"
+            android:onClick="decrementa"
+            android:text="@string/decrementa" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="reset"
+            android:text="@string/reset" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
