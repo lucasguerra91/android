@@ -46,9 +46,13 @@ public class MainActivity extends AppCompatActivity {
         // Recupero el editText y lo guardo en una variable
         EditText numero_reset = (EditText) findViewById(R.id.n_reseteo);
 
-        // Asigno ese valor a contador
-        contador = Integer.parseInt(numero_reset.getText().toString());
-        
+        // Asigno ese valor a contador capturando errores, como por ejemplo que no se cambie el valor de 0
+        try{contador = Integer.parseInt(numero_reset.getText().toString());
+        }catch (Exception e){
+            contador = 0;
+        }
+
+
         // Limpio la variable
         numero_reset.setText("");
 
