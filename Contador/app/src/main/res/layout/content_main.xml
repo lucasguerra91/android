@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:drawable/alert_dark_frame"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lguerra.contador.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -31,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="17dp"
-            android:textSize="24sp" />
+            android:textSize="40sp" />
 
     </LinearLayout>
 
@@ -44,18 +43,25 @@
 
         <Button
             android:id="@+id/incrementa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:onClick="incrementa"
-            android:text="@string/incrementa" />
+            android:text="+"
+            android:textSize="40dp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            />
 
         <Button
             android:id="@+id/decrementa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/incrementa"
             android:onClick="decrementa"
-            android:text="@string/decrementa" />
+            android:text="-"
+            android:textSize="40dp" />
 
     </LinearLayout>
 
@@ -72,6 +78,26 @@
             android:layout_centerHorizontal="true"
             android:onClick="reset"
             android:text="@string/reset" />
+
+        <EditText
+            android:id="@+id/n_reseteo"
+            android:layout_width="72sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="0"
+            android:inputType="numberSigned"
+            android:cursorVisible="false"
+            />
+
+        <CheckBox
+            android:id="@+id/negativos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Conteo Negativo"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
