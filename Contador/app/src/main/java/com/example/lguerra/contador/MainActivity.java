@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Reseteo el campo resultado con el numero cargado
         texto_resultado.setText(""+contador);
+
+        InputMethodManager miteclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        // Buscar en la Api
+        miteclado.hideSoftInputFromWindow(numero_reset.getWindowToken() , 0  );
+
+
 
     }
 
